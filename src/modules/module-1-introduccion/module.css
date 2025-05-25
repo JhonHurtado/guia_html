@@ -1,0 +1,260 @@
+/* Estilos específicos para módulos */
+
+/* Números de módulo y sección */
+.module-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.section-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Header del módulo */
+.module-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+}
+
+.module-icon-large {
+    transition: var(--transition-base);
+}
+
+.module-icon-large:hover {
+    transform: scale(1.05);
+}
+
+/* Secciones del módulo */
+.module-section {
+    scroll-margin-top: 100px;
+}
+
+.module-section .card {
+    transition: var(--transition-base);
+}
+
+.module-section .card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline para historia */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.timeline-content h6 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Navegación lateral */
+.sticky-top .card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.list-group-item-action:hover {
+    background-color: var(--light-color);
+    border-color: var(--primary-color);
+}
+
+.list-group-item-action.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Código syntax highlighting */
+pre {
+    background: #2d3748;
+    border-radius: 8px;
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+pre code {
+    color: #e2e8f0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Destacados y alertas */
+.alert {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    color: #1565c0;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+    color: #2e7d32;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    color: #ef6c00;
+}
+
+/* Badges del módulo */
+.badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 20px;
+}
+
+/* Cards de ejemplos */
+.card h-100 {
+    transition: var(--transition-base);
+}
+
+.card h-100:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones de progreso */
+.btn-primary, .btn-success {
+    border-radius: 25px;
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    transition: var(--transition-base);
+}
+
+.btn-primary:hover, .btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Lista de características */
+.list-unstyled li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.list-unstyled li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .module-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .section-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .timeline-item {
+        padding-left: 1.5rem;
+    }
+    
+    .timeline-marker {
+        left: -21px;
+    }
+}
+
+@media (max-width: 768px) {
+    .module-header {
+        text-align: center;
+        padding: 3rem 0;
+    }
+    
+    .module-icon-large {
+        margin-top: 2rem;
+    }
+    
+    pre {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .timeline::before {
+        left: 10px;
+    }
+    
+    .timeline-marker {
+        left: -16px;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Animaciones */
+.module-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.module-section:nth-child(1) { animation-delay: 0.1s; }
+.module-section:nth-child(2) { animation-delay: 0.2s; }
+.module-section:nth-child(3) { animation-delay: 0.3s; }
+.module-section:nth-child(4) { animation-delay: 0.4s; }
+
+/* Estados de secciones completadas */
+.section-completed {
+    opacity: 0.7;
+}
+
+.section-completed .section-number {
+    background-color: var(--success-color) !important;
+    color: white;
+}
+
+.section-completed::after {
+    content: '✓';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: var(--success-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
